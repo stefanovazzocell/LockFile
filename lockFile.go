@@ -3,6 +3,7 @@ package lockfile
 import (
 	"errors"
 	"os"
+	"path/filepath"
 )
 
 var (
@@ -20,7 +21,7 @@ type lockFile struct {
 // If the file is already locked by another process, it returns an error.
 func NewLockFile(path string) (lockFile, error) {
 	// Attempt to open/create file
-	file, err := os.OpenFile(path, os.O_WRONLY|os.O_CREATE, 0640)
+	file, err := os.OpenFile(filepath.Clean(path), os.O_WRONLY|os.O_CREATE, 0600)
 	if err != nil {
 		return lockFile{}, err
 	}
