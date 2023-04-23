@@ -54,3 +54,4 @@ return file.Close()
 This library has been tested on:
 - `Linux/amd64` (Fedora Linux)
 - `windows/amd64` (Windows 10 VM)
+- `darwin/arm64` (M1 MacBook)
