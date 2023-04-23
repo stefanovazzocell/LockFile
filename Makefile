@@ -11,8 +11,8 @@ test:
 	govulncheck .
 	gosec -quiet .
 
-.PHONY: setup
-setup:
+.PHONY: deps
+deps:
 	@echo "> Installing mod requirements..."
 	go mod download
 	@echo -e "\n############################"

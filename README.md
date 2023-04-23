@@ -1,7 +1,13 @@
 #  LockFile
 A cross-platform Go library that creates a lock file.
 
-## Utilization
+## Development
+
+Run `make deps` to install dependencies.
+
+Run `make test` to format, test, and check the code for security issues.
+
+## Examples
 
 You can either use the full-auto mode or on a self-service basis.
 
